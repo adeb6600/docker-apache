@@ -16,6 +16,7 @@ RUN apt-get update && \
       php5-json \
       php5-ldap \
       php5-mysql \
+      php5-mcrpyt \
       php5-pgsql
 
 COPY woobstores-default /etc/apache2/sites-enabled/woobstores.conf
