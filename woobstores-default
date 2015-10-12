@@ -1,0 +1,27 @@
+<VirtualHost *:80>
+  ServerName woobstores01
+  ServerAlias woobstores.com www.awoobstores.com
+  DocumentRoot /var/www/app/public/
+
+  <Directory /var/www/app/public/>
+    Options FollowSymLinks
+    AllowOverride ALL
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+
+  <Location /server-status>
+    SetHandler server-status
+
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+  </Location>
+
+  LogLevel info
+  ErrorLog /var/log/apache2/woobstores.com-error.log
+  CustomLog /var/log/apache2/woobstores.com-access.log combined
+
+  RewriteEngine On
+  </VirtualHost>
