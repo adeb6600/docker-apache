@@ -18,7 +18,7 @@ RUN apt-get update && \
       php5-mysql \
       php5-pgsql
 
-COPY woobstores_default /etc/apache2/sites-available/woobstores.conf
+COPY woobstores-default /etc/apache2/sites-available/woobstores.conf
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
