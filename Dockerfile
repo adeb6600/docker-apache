@@ -1,9 +1,10 @@
 FROM ubuntu:14.04
 MAINTAINER Alexander Schenkel <alex@alexi.ch>
 
+VOLUME ["/etc/apache2"]
+
 VOLUME ["/var/www"]
 
-VOLUME ["/etc/apache2"]
 
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
