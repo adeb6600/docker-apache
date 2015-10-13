@@ -1,7 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Alexander Schenkel <alex@alexi.ch>
 
-VOLUME ["/etc/apache2"]
 
 VOLUME ["/var/www"]
 
