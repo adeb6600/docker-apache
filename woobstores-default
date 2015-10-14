@@ -1,6 +1,6 @@
 <VirtualHost *:80>
   ServerName woobstores01
-  ServerAlias woobstores.com www.woobstores.com
+  ServerAlias carnefits.com www.carnefits.com
   DocumentRoot /var/www/app/public/
 
   <Directory /var/www/app/public/>
