@@ -1,9 +1,9 @@
 <VirtualHost *:80>
   ServerName woobstores01
-  ServerAlias woobstores.com www.woobstores.com
-  DocumentRoot /var/www/app/public/
+  ServerAlias thearenamarket.com www.thearenamarket.com
+  DocumentRoot /var/www/app/arena/
 
-  <Directory /var/www/app/public/>
+  <Directory /var/www/app/arena/>
     Options FollowSymLinks
     AllowOverride ALL
     Order allow,deny
@@ -20,8 +20,8 @@
   </Location>
 
   LogLevel info
-  ErrorLog /var/log/apache2/woobstores.com-error.log
-  CustomLog /var/log/apache2/woobstores.com-access.log combined
+  ErrorLog /var/log/apache2/thearenamarket.com-error.log
+  CustomLog /var/log/apache2/thearenamarket.com-access.log combined
 
   RewriteEngine On
   </VirtualHost>
