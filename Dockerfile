@@ -19,7 +19,8 @@ RUN apt-get update && \
       php5-ldap \
       php5-mysql \
       php5-mcrypt \
-      php5-pgsql
+      php5-pgsql \
+      php5-curl
 
 COPY woobstores-default /etc/apache2/sites-enabled/woobstores.conf
 COPY thearenamarket-default /etc/apache2/sites-enabled/thearenamarket.conf
