@@ -20,7 +20,14 @@ RUN apt-get update && \
       php5-mysql \
       php5-mcrypt \
       php5-pgsql \
-      php5-curl
+      php5-curl \
+      php5-memcache \
+      php-pear  \
+      build-essential
+
+RUN pecl install memcache
+
+RUN echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
 
 COPY woobstores-default /etc/apache2/sites-enabled/woobstores.conf
 COPY thearenamarket-default /etc/apache2/sites-enabled/thearenamarket.conf
