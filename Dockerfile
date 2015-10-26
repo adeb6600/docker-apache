@@ -25,8 +25,6 @@ RUN apt-get update && \
       php-pear  \
       build-essential
 
-RUN echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
-
 COPY woobstores-default /etc/apache2/sites-enabled/woobstores.conf
 COPY thearenamarket-default /etc/apache2/sites-enabled/thearenamarket.conf
 COPY woobsresources-default /etc/apache2/sites-enabled/woobsresources.conf
