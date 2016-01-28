@@ -30,7 +30,6 @@ COPY thearenamarket-default /etc/apache2/sites-enabled/thearenamarket.conf
 COPY woobsresources-default /etc/apache2/sites-enabled/woobsresources.conf
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
-RUN  kill -9 ps au | grep apache
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 
